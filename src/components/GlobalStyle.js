@@ -5,9 +5,8 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
 
 body {
-    background-color: pink;
+  background-color: rgb(255, 103, 164);
   margin-left: 0;
-  padding-left: 40px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -20,8 +19,9 @@ code {
     monospace;
 }
 
-p {
+p, ul {
   margin: 0;
+  padding: 0;
 }
 
 

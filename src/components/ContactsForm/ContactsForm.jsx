@@ -1,8 +1,14 @@
 import { nanoid } from 'nanoid';
-import { Formik, Field } from 'formik';
+import { Formik } from 'formik';
 import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/contactsSlice';
-import { Form, Label, Button, ErrorMessage } from './ContactsForm.styled';
+import {
+  Form,
+  Label,
+  Field,
+  Button,
+  ErrorMessage,
+} from './ContactsForm.styled';
 import { schema } from './validSchema';
 import { getContacts } from 'redux/selectors';
 
@@ -51,7 +57,7 @@ export const ContactsForm = () => {
           <Field type="tel" name="number" />
           <ErrorMessage name="number" component="div" />
         </Label>
-        <Button type="submit">Add Contact</Button>
+        <Button type="submit">Create</Button>
       </Form>
     </Formik>
   );

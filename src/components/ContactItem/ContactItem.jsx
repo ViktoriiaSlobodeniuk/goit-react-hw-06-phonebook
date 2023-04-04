@@ -1,17 +1,20 @@
 import { useDispatch } from 'react-redux';
-import { Contact, Button } from './ContactItem.styled';
+import { Contact, Button, ContactInfo } from './ContactItem.styled';
 import PropTypes from 'prop-types';
 import { deleteContact } from 'redux/contactsSlice';
-
+import { AiOutlineDelete } from 'react-icons/ai';
 export const ContactItem = ({ name, number, id }) => {
   const dispatch = useDispatch();
 
   return (
     <Contact>
-      <p>{name}</p>
-      <p>{number}</p>
+      <ContactInfo>
+        <p>{name}</p>
+        <p>{number}</p>
+      </ContactInfo>
+
       <Button type="button" onClick={() => dispatch(deleteContact(id))}>
-        Delete
+        <AiOutlineDelete />
       </Button>
     </Contact>
   );

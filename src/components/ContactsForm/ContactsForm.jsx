@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/contactsSlice';
 import { Form, Label, Button, ErrorMessage } from './ContactsForm.styled';
 import { schema } from './validSchema';
+import { getContacts } from 'redux/selectors';
 
 const initialValues = {
   name: '',
@@ -11,7 +12,7 @@ const initialValues = {
 };
 
 export const ContactsForm = () => {
-  const contacts = useSelector(state => state.contacts);
+  const contacts = useSelector(getContacts);
   const dispatch = useDispatch();
 
   const handleSubmit = (values, { resetForm }) => {
